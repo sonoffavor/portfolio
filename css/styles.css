@@ -1,0 +1,72 @@
+body {
+    margin: 0;
+}
+
+h1 {
+    position: relative;
+    font-family: 'Raleway', sans-serif;
+    font-size: 6.0rem;
+    font-weight: 800;
+    color: #fafafa;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+    top: 12.1875rem; /*1218.75% = 195px */
+    left: 4.625rem; /*462.5% = 74px */
+    margin: 0;
+    padding: 0;
+
+}
+
+/* Navigation Bar Styles */
+#navbar {
+    background-color: #07689f;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-shadow: 2px 0 2px black;
+}
+
+/* Links inside the navbar */
+#navbar a {
+    font-family: 'Trirong', serif;
+    font-weight: 100;
+    float: right;
+    display: block;
+    color: #fafafa;
+    text-align: center;
+    padding: 10px 12px;
+    text-decoration: none;
+}
+
+/* Change background on mouse-over  */
+/* #navbar a:hover {
+
+} */
+
+/* Main Content */
+#main-doc {
+    margin-top: 42px;
+}
+
+/* Welcome Section */
+#welcome-section {
+    background: linear-gradient(239.3deg, rgba(0, 118, 186, 0.78), rgba(86, 193, 255, 0.78)), 
+                url('https://image.freepik.com/free-photo/working-code_1098-19858.jpg') center/cover;
+    height: 100vh;
+}
+
+/* Abilities and Education */
+#abilities_and_education {
+    position: relative;
+    display: inline-block;
+    background-color: #ff7e67;
+    font-family: 'Trirong', serif;
+    font-weight: 600;
+    text-align: left;
+    font-size: 1.5rem;
+    color: #fafafa;
+    padding: 0.5rem 0.5rem;
+    top: 170px;
+    left: 80px;
+}
