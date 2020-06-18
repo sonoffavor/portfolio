@@ -1,18 +1,15 @@
 body {
     margin: 0;
+    
 }
 
 h1 {
-    position: relative;
     font-family: 'Raleway', sans-serif;
-    font-size: 6.0rem;
+    font-size: 10rem;
     font-weight: 800;
     color: #fafafa;
     text-transform: uppercase;
-    letter-spacing: 0.05rem;
-    top: 12.1875rem; /*1218.75% = 195px */
-    left: 4.625rem; /*462.5% = 74px */
-    margin: 0;
+    margin:0;
     padding: 0;
 
 }
@@ -31,42 +28,49 @@ h1 {
 #navbar a {
     font-family: 'Trirong', serif;
     font-weight: 100;
-    float: right;
     display: block;
+    float: right;
     color: #fafafa;
     text-align: center;
-    padding: 10px 12px;
+    padding: 10px 14px;
     text-decoration: none;
 }
 
-/* Change background on mouse-over  */
-/* #navbar a:hover {
+#navbar .icon {
+    display: none;
+}
 
-} */
+.sub-navigation {
+    display: none;
+}
 
 /* Main Content */
 #main-doc {
-    margin-top: 42px;
+    /* margin-top: 48px; */
 }
 
 /* Welcome Section */
 #welcome-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background: linear-gradient(239.3deg, rgba(0, 118, 186, 0.78), rgba(86, 193, 255, 0.78)), 
                 url('https://image.freepik.com/free-photo/working-code_1098-19858.jpg') center/cover;
     height: 100vh;
+    padding: 0 10px 0 10px;
 }
 
-/* Abilities and Education */
-#abilities_and_education {
-    position: relative;
-    display: inline-block;
+/* Name, Abilities, & Education */
+#welcome-section p {
     background-color: #ff7e67;
     font-family: 'Trirong', serif;
     font-weight: 600;
     text-align: left;
-    font-size: 1.5rem;
+    font-size: 2.3rem;
     color: #fafafa;
     padding: 0.5rem 0.5rem;
-    top: 170px;
-    left: 80px;
+    margin: 0;
 }
+
+

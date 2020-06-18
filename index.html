@@ -16,23 +16,123 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <title>Ben Rietman's Portfolio</title>
+
+    <!-- The @media is in html for freecodecamp test -->
+    <style>
+        @media only screen and (max-width: 1100px) {
+
+            h1 {
+                /* font-size: 16.5vh; */
+                font-size: 7rem;
+            }
+
+            #welcome-section p {
+                font-size: 1.6rem;
+            }
+
+        }
+
+        @media only screen and (max-width: 500px), (max-height: 500px) {
+
+            h1 {
+                font-size: 4rem;
+            }
+
+            #welcome-section p {
+                font-size: 0.96rem;
+            }
+
+            /*Navigation for Mobile*/
+            #navbar {
+                overflow: visible;
+    
+
+            }
+
+            .main-navigation {
+                box-shadow: -2px 2px 16px rgba(0,0,0,0.2);
+                position: absolute;
+                display: none;
+                /* display: block; */
+                z-index: 1;
+                top: 48px;
+                right: 0;
+            }
+
+            .sub-navigation {
+                box-shadow: -2px 2px 16px rgba(0,0,0,0.2);
+                position: absolute;
+                z-index: 1;
+                top: 48px;
+                right: 110px;
+
+            }
+
+            #navbar a.icon {
+                float: right;
+                display: block;
+            }
+
+            .show-main-nav {
+                display: flex;
+                flex-direction: column-reverse;
+                width: 110px;
+                background-color: #07689f;;
+            }
+
+            .show-sub-nav {
+                display: flex;
+                flex-direction: column;
+                width: 110px;
+                background-color: #07689f;
+            }
+
+        }
+    </style>
+
+    <!-- External javascript -->
+    <script src="script/main.js"></script>
     
 </head>
 <body>
-     <!-- Navigation Bar -->
-     <nav id="navbar">
-        <a href="#contact">contact</a>
-        <a href="#projects">projects</a>
-        <a href="#welcome-section">about</a>
-     </nav>
+    <!-- <nav id="navbar">
+        <div id="my-navigation" class="main-navigation">
+            <ul>
+                <li><a href="#contact">contact</a></li>
+                <li><a href="#projects">projects</a></li>
+                <li><a href="#welcome-section">about</a></li>
+            </ul>
+        </div>
+        
+        <a href="#" onclick="navFunction()" class="icon" role="button"><i class="fa fa-bars"></i></a>        
+    </nav> -->
+    <header>
+         <!-- Navigation Bar -->
+         <nav id="navbar">
+            <div id="my-navigation" class="main-navigation">
+                <a href="#contact">contact</a>
+                <a href="#" onclick="subNavFunction()" role="button">projects</a>
+                <div id="my-sub-navigation" class="sub-navigation">
+                    <a href="#html-css-js">html, css, js</a>
+                    <a href="#iOS-iPad">iOS, iPad</a>
+                    <a href="#android">Android</a>
+                </div>
+                <a href="#welcome-section">about</a>     
+            </div>
+            <a href="#" onclick="mainNavFunction()" class="icon" role="button"><i class="fa fa-bars"></i></a>        
+        </nav>
+       
+    </header>
 
+    <!-- Main Document -->
     <main id="main-doc">
+
         <!-- Welcome Section -->
         <section id="welcome-section">
-        <h1>Ben Rietman</h1>
-        <p id="abilities_and_education">Web Developer, Mobile Developer, & Software Engineer</p>
-        
-        
+            <div class="container">
+                <h1>Ben Rietman</h1>
+                <p>Web Developer, Mobile Developer, & Software Engineer</p>               
+            </div>       
         </section>
 
         <!-- Portfolio Section -->
