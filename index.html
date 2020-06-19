@@ -53,38 +53,36 @@
                 box-shadow: -2px 2px 16px rgba(0,0,0,0.2);
                 position: absolute;
                 display: none;
-                /* display: block; */
-                z-index: 1;
-                top: 48px;
+                top: 52px;
                 right: 0;
             }
 
             .sub-navigation {
-                box-shadow: -2px 2px 16px rgba(0,0,0,0.2);
-                position: absolute;
-                z-index: 1;
-                top: 48px;
-                right: 110px;
-
+                right: 120px;
             }
 
             #navbar a.icon {
                 float: right;
                 display: block;
+                position: relative;
+                z-index: 1;
+                cursor: pointer;
             }
 
             .show-main-nav {
                 display: flex;
                 flex-direction: column-reverse;
-                width: 110px;
-                background-color: #07689f;;
+                width: 120px;
+                background-color: #07689f;
             }
 
             .show-sub-nav {
                 display: flex;
-                flex-direction: column;
-                width: 110px;
-                background-color: #07689f;
+            }
+
+            .icon i {
+                position: relative;
+                z-index: -1;
             }
 
         }
@@ -95,33 +93,22 @@
     
 </head>
 <body>
-    <!-- <nav id="navbar">
-        <div id="my-navigation" class="main-navigation">
-            <ul>
-                <li><a href="#contact">contact</a></li>
-                <li><a href="#projects">projects</a></li>
-                <li><a href="#welcome-section">about</a></li>
-            </ul>
-        </div>
-        
-        <a href="#" onclick="navFunction()" class="icon" role="button"><i class="fa fa-bars"></i></a>        
-    </nav> -->
     <header>
+
          <!-- Navigation Bar -->
          <nav id="navbar">
             <div id="my-navigation" class="main-navigation">
-                <a href="#contact">contact</a>
-                <a href="#" onclick="subNavFunction()" role="button">projects</a>
+                <a href="#contact" class="nav-link">contact</a>
+                <a href="#0" ontouchstart="subNavFunction()" onclick="subNavFunction()" id="projects-btn" class="nav-link" role="button">projects</a>
                 <div id="my-sub-navigation" class="sub-navigation">
-                    <a href="#html-css-js">html, css, js</a>
-                    <a href="#iOS-iPad">iOS, iPad</a>
-                    <a href="#android">Android</a>
+                    <a href="#html-css-js" class="nav-link">html, css, js</a>
+                    <a href="#iOS-iPad" class="nav-link">iOS, iPad</a>
+                    <a href="#android" class="nav-link">Android</a>
                 </div>
                 <a href="#welcome-section">about</a>     
             </div>
-            <a href="#" onclick="mainNavFunction()" class="icon" role="button"><i class="fa fa-bars"></i></a>        
+            <a href="#0" ontouchstart="mainNavFunction()" onclick="mainNavFunction()" class="icon" role="button"><i class="fa fa-bars"></i></a>        
         </nav>
-       
     </header>
 
     <!-- Main Document -->
@@ -137,7 +124,23 @@
 
         <!-- Portfolio Section -->
         <section id="projects">
+            <h2 id="projects-header">Projects</h2>
 
+            <h3 id="html-css-js">html, css, js</h3>
+            <div class="flex-container">
+                <div class="project-tile">
+
+                </div>
+                <div class="project-tile">
+
+                </div>
+                <div class="project-tile">
+
+                </div>
+                <div class="project-tile">
+
+                </div>
+            </div>
         </section>
 
         <!-- Contact Section -->
