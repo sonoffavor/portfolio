@@ -106,4 +106,44 @@ h1 {
     margin: 0;
 }
 
+/* Project Section */
+#projects {
+    background-color: #ff7e67;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    overflow: hidden;
+    
+}
+
+.project-tile {
+    margin: 10px 0;
+    width: 30%;
+}
+
+.project-tile a {
+    text-decoration: none;
+}
+
+.project-tile img{ 
+    border-style: solid;
+    border-width: 1px;
+    width: 100%;
+    margin: 0;
+}
+
+.project-tile p {
+    font-family: 'Trirong', serif;
+    font-weight: 400;
+    font-size: 30px;
+    color: #fafafa;
+    display: inline-block;
+    margin: 0;
+}
+
+
 
