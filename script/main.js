@@ -58,6 +58,7 @@ window.onclick = function(event) {
     }
 }
 
+// Closes drop downs if user taps outside of them
 window.ontouchstart = function(event) {
 
     if (!event.target.matches('.icon') && !event.target.matches('.nav-link')) {
@@ -105,5 +106,30 @@ window.ontouchstart = function(event) {
             subOpenDropdown.classList.remove('show-sub-nav');
 
         }
+    }
+}
+
+//Code for the collapsible html-css-js section
+function htmlCSSjsButton() {
+    // Get html-css-js-collapsible-grid-container
+    var htmlCSSjsCollSect = document.getElementById("html-css-js-collapsible-grid-container");
+
+    // get the current value of the html-css-js-collapsible grid container display property
+    var displaySetting = htmlCSSjsCollSect.style.display;
+
+    // get the html-css-js-toggle to change what it says
+    var htmlCSSjsToggle = document.getElementById("html-css-js-button");
+
+    // Toggling the html-css-js-collapsible-grid-container and html-css-js-toggle, depending on current state
+    if (displaySetting == "grid") {
+        // html-css-js-grid-container visible. hide it
+        htmlCSSjsCollSect.style.display = "none";
+        // change html-css-js-toggle text
+        htmlCSSjsToggle.innerHTML = "Show more";
+    } else{
+        // html-css-js-collapsible-grid-container is hidden. show it
+        htmlCSSjsCollSect.style.display = "grid";
+        // change html-css-js-toggle text
+        htmlCSSjsToggle.innerHTML = "Show less";
     }
 }

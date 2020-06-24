@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Meta data -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Trirong:wght@600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Trirong&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Trirong:wght@100&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css" integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q" crossorigin="anonymous">
 
     <!-- External Style Sheet -->
     <link rel="stylesheet" href="css/styles.css">
@@ -23,10 +28,10 @@
         @media only screen and (max-width: 1100px) {
 
             h1 {
-                /* font-size: 16.5vh; */
                 font-size: 7rem;
             }
 
+            /* Welcome Section */
             #welcome-section p {
                 font-size: 1.6rem;
             }
@@ -45,6 +50,21 @@
                 line-height: 30px;
             }
 
+            /* Contact Section */
+            #contact h3 {
+                font-size: 2.8rem;
+                padding: 49px 10px;
+            }
+
+            #profile-link {
+                font-size: 3.57rem;
+                padding: 50px 5px; 
+            }
+
+            #contact p {
+                font-size: 1.5rem;
+            }
+
 
         }
 
@@ -54,6 +74,7 @@
                 font-size: 4rem;
             }
 
+            /* Welcome Section */
             #welcome-section p {
                 font-size: 0.96rem;
             }
@@ -61,10 +82,9 @@
             /*Navigation for Mobile*/
             #navbar {
                 overflow: visible;
-    
-
             }
-
+            
+            /* Main Navigation Menu */
             .main-navigation {
                 box-shadow: -2px 2px 16px rgba(0,0,0,0.2);
                 position: absolute;
@@ -73,6 +93,7 @@
                 right: 0;
             }
 
+            /* Sub Navigation Menu */
             .sub-navigation {
                 right: 120px;
             }
@@ -85,6 +106,7 @@
                 cursor: pointer;
             }
 
+            /* Navigation Links */
             .show-main-nav {
                 display: flex;
                 flex-direction: column-reverse;
@@ -92,6 +114,7 @@
                 background-color: #07689f;
             }
 
+            /* Sub Navigation Links */
             .show-sub-nav {
                 display: flex;
             }
@@ -106,23 +129,24 @@
                 font-size: 3rem;
             }
 
-            .grid-container {
-                grid-template-areas:
-                    "project-section"
-                    "project-1"
-                    "project-2"
-                    "project-3"
-                    "project-4";
-                grid-template-columns: 1fr;
-                grid-template-rows: auto 1fr 1fr 1fr 1fr;
-                grid-row-gap: 20px;
-                align-items: center;
-            }
-
             .project-source-file {
                 padding-top: 10px;
             }
 
+            /* Contact Section */
+            #contact h3 {
+                font-size: 1.8rem;
+                padding: 49px 10px;
+            }
+
+            #profile-link {
+                font-size: 2.15rem;
+                padding: 50px 5px; 
+            }
+
+            #contact p {
+                font-size: 1.2rem;
+            }
         }
     </style>
 
@@ -132,7 +156,7 @@
 </head>
 <body>
     <header>
-
+        
          <!-- Navigation Bar -->
          <nav id="navbar">
             <div id="my-navigation" class="main-navigation">
@@ -162,51 +186,96 @@
 
         <!-- Portfolio Section -->
         <section id="projects">
+
+            <!-- Project Section Header -->
             <h2 id="projects-header">Projects</h2>
 
+            <!-- html, css, and jss projects sub head -->
+            <h3 id="html-css-js">HTML, CSS, JS</h3>
+
+            <!-- first six projects are displayed -->
             <div class="grid-container">
-                <h3 id="html-css-js" class="project-section">html, css, js</h3>
-                <div class="project-tile project-1">
-                    <a href="https://sonoffavor.github.io/product-landing-page/">
-                        <img src="images/product-landing-page.png" alt="product landing page" target="_blank">
+                <div class="project-tile">
+                    <a href="https://sonoffavor.github.io/product-landing-page/" target="_blank">
+                        <img src="images/product-landing-page.png" alt="product landing page">
                     </a>
                     <p class="project-title">Product Landing Page</p>
                     <p class="project-source-file"><a href="https://github.com/sonoffavor/product-landing-page" target="_blank">Source Files</a></p>
                 </div>
-                <div class="project-tile project-2">
+                <div class="project-tile">
                     <a href="https://sonoffavor.github.io/technical-documentation-page/" target="_blank">
                         <img src="images/technical-documentation.png" alt="technical documentation page">
                     </a>
                     <p class="project-title">Technical Documentation Page</p>
                     <p class="project-source-file"><a href="https://github.com/sonoffavor/technical-documentation-page" target="_blank">Source Files</a></p>
                 </div>
-                <div class="project-tile project-3">
+                <div class="project-tile">
                     <a href="https://sonoffavor.github.io/survey-form/" target="_blank">
                         <img src="images/survey-form.png" alt="survey form">
                     </a>
                     <p class="project-title">Survey Form</p>
                     <p class="project-source-file"><a href="https://github.com/sonoffavor/survey-form" target="_blank">Source Files</a></p>
                 </div>
-                <div class="project-tile project-4">
+                <div class="project-tile">
                     <a href="https://sonoffavor.github.io/tribute-page/" target="_blank">
-                        <img src="images/tribute-page.png" alt="tribute page">   
+                        <img src="images/tribute-page.png" alt="tribute page">
                     </a>
                     <p class="project-title">Tribute Page</p>
                     <p class="project-source-file"><a href="https://github.com/sonoffavor/tribute-page" target="_blank">Source Files</a></p>
                 </div>
+
+                <!-- ADD TWO MORE PROJECTS TO THIS SECTION -->
             </div>
-            <div class="button-container">
-                <a href="https://github.com/sonoffavor?tab=repositories" target="_blank">Show More</a>
+
+            <!-- Remaining html, css, and js projects are in this collapsible grid -->            
+            <div id="html-css-js-collapsible-grid-container" class="grid-container">
+                <div class="project-tile">
+                    <a href="#">
+                        <img src="images/demo-project-image.jpg" alt="demo-project-image" target="_blank">
+                    </a>
+                    <p class="project-title">Demo Project Title</p>
+                    <p class="project-source-file"><a href="#" target="_blank">Source Files</a></p>
+                </div>
+                <div class="project-tile">
+                    <a href="#">
+                        <img src="images/demo-project-image.jpg" alt="demo-project-image" target="_blank">
+                    </a>
+                    <p class="project-title">Demo Project Title</p>
+                    <p class="project-source-file"><a href="#" target="_blank">Source Files</a></p>
+                </div>
+                <div class="project-tile">
+                    <a href="#">
+                        <img src="images/demo-project-image.jpg" alt="demo-project-image" target="_blank">
+                    </a>
+                    <p class="project-title">Demo Project Title</p>
+                    <p class="project-source-file"><a href="#" target="_blank">Source Files</a></p>
+                </div>
             </div>
+            <div class="collapsible-button-container">
+                <button type="button" id="html-css-js-button" class="collapsible-button" ontouchstart="htmlCSSjsButton()" onclick="htmlCSSjsButton()">Show More</button>
+            </div>
+
+            <!-- Include projects for iOS and Android -->
         </section>
 
         <!-- Contact Section -->
         <section id="contact">
-
+            <div class="contact-section-container">
+                <h3>When should I start?</h3>
+                <a href="https://github.com/sonoffavor" id="profile-link" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                <a href="mailto:sonoffavor@gmail.com" id="profile-link"><i class="fas fa-envelope-square" target="_blank"></i> Email</a>
+                <p>Thank you for taking the time to look through my portfolio!</p>
+            </div>
         </section>
     </main>
-    <footer>
 
+    <footer>
+        <div class="footer-container">
+            <a href="https://fontawesome.com" target="_blank">Icons are from frontawesome.com</a>
+            <a href="http://www.freepik.com" target="_blank">Image is designed by pressfoto / Freepik</a>
+            <p>Website designed and coded by Ben Rietman</p>
+            <p>Copyright 2020</p>
+        </div>
     </footer>
 </body>
 </html>

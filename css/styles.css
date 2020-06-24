@@ -28,12 +28,13 @@ h2 {
 
 h3 {
     font-family: 'Raleway', sans-serif;
-    font-size: 3rem;
+    font-size: 2.2rem;
     font-weight: 800;
     color: #fafafa;
-    text-transform: uppercase;
-    padding-top: 49px;
-    margin: -49px 0 0 0;
+    /* text-transform: uppercase; */
+    padding: 49px 15px;
+    max-width: 1260px;
+    margin: -49px auto 0 auto;
 }
 
 
@@ -45,6 +46,7 @@ h3 {
     top: 0;
     width: 100%;
     box-shadow: 2px 0 2px black;
+    z-index: 2;
 }
 
 /* Links inside the navbar */
@@ -67,7 +69,7 @@ h3 {
     display: none;
     box-shadow: -2px 2px 16px rgba(0,0,0,0.2);
     position: absolute;
-    z-index: 1;
+    z-index: 3;
     top: 52px;
     right: 83px;
 
@@ -130,55 +132,28 @@ h3 {
 /* Project Section */
 #projects {
     background-color: #ff7e67;
+    padding-bottom: 60px;
     /* background-color: #a2d5f2; */
-}
-
-.flex-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    overflow: hidden;
-    max-width: 1500px;
-    margin: 0 auto;
-    padding: 0 5px;
-    
 }
 
 .grid-container {
     display: grid;
-    grid-template-areas:
-        "project-section project-section "
-        "project-1 project-2"
-        "project-3 project-4";
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     grid-column-gap: 45px;
     grid-row-gap: 30px;
-    max-width: 1500px;
+    width: 100%;
+    max-width: 1260px;
     margin: 0 auto;
+    
+}
+
+#html-css-js-collapsible-grid-container {
+    margin-top: 30px;
+    display: none;
+}
+
+.project-tile { 
     padding: 0 15px;
-}
-
-.project-1 {
-    grid-area: project-1;
-}
-
-.project-2 {
-    grid-area: project-2;
-}
-
-.project-3 {
-    grid-area: project-3;
-}
-
-.project-4 {
-    grid-area: project-4;
-}
-
-.project-tile {
-    /* width: 650px; */
-    /* margin: 0 auto;   */
 }
 
 .project-tile a {
@@ -186,13 +161,14 @@ h3 {
 }
 
 .project-tile img:hover, .project-tile img:focus {
-    width: 102%;
+    width: 101%;
 }
 
 .project-tile img{ 
     border-style: solid;
     border-width: 1px;
     border-radius: 10px;
+    border-color: black;
     box-shadow: 10px 10px 10px rgba(0,0,0,0.2);
     width: 100%;
     margin: 0;
@@ -229,27 +205,115 @@ h3 {
     padding: 10px;
 }
 
-.button-container a {
+.collapsible-button {
     font-family: 'Trirong', serif;
     font-weight: 600;
     background-color: #07689f;
     border: none;
-    color: #fafafa;
     box-shadow: 5px 5px 5px rgba(0,0,0,0.2);
+    color: #fafafa;
+    outline: none;
     padding: 15px 32px;
     text-decoration: none;
-    display: inline-block;
     font-size: 1.5rem;
     margin: 30px auto;
 }
 
-.button-container a:hover, .button-container a:focus {
+.collapsible-button:hover, .collapsible-button:focus {
     font-size: 1.6rem;
     background-color: #079F8A;
 }
 
-.button-container {
+
+.collapsible-button-container {
     text-align: center;
+    /* padding-bottom: 60px; */
+}
+
+/* Contact Section */
+#contact {
+    background-color: #a2d5f2;
+    padding: 100px 0;
+
+}
+
+.contact-section-container {
+    text-align: center;
+    max-width: 1260px;
+    width: 100%;
+    margin: 0 auto;
+
+}
+
+#contact h3 {
+    font-size: 4rem;
+}
+
+#profile-link{
+    display: inline-block;
+    position: relative;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 5.5rem;
+    color: #ff7e67;
+    text-decoration: none;
+    padding: 50px 15px;
+    z-index: 0;
+
+}
+
+#profile-link:hover {
+   top: 20px;
+}
+
+#contact i {
+    position: relative;
+    z-index: -1;
+}
+
+#contact p {
+    font-family: 'Trirong', serif;
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: #fafafa;
+    padding: 49px 15px 0;
+    margin: 0;
+}
+
+/* Footer Section */
+footer {
+    background-color: #a2d5f2;
+    padding: 0 15px 10px;
+}
+
+.footer-container {
+    width: 100%;
+    max-width: 1260px;
+    margin: 0 auto;
+}
+
+.footer-container a {
+    font-family: 'Trirong', serif;
+    font-weight: 100;
+    font-size: 0.8rem;
+    color: #fafafa;
+    text-decoration: none;
+}
+
+.footer-container a[href^="http://www.freepik.com"] {
+    margin-left: 10px;
+}
+
+.footer-container a:hover {
+    background-color: #ff7e67;
+}
+
+.footer-container p {
+    font-family: 'Trirong', serif;
+    font-weight: 100;
+    font-size: 0.8rem;
+    color: #fafafa;
+    margin: 0;
 }
 
 
