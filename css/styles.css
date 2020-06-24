@@ -1,4 +1,7 @@
 body {
+    font-family: 'Trirong', serif;
+    font-weight: 400;
+    color: #fafafa;
     margin: 0;
     
 }
@@ -7,7 +10,6 @@ h1 {
     font-family: 'Raleway', sans-serif;
     font-size: 10rem;
     font-weight: 800;
-    color: #fafafa;
     text-transform: uppercase;
     margin:0;
     padding: 0;
@@ -18,7 +20,6 @@ h2 {
     font-family: 'Raleway', sans-serif;
     font-size: 8rem;
     font-weight: 800;
-    color: #fafafa;
     padding-top: 60px;
     margin-top: 0px;
     margin-bottom: 31px;
@@ -30,15 +31,35 @@ h3 {
     font-family: 'Raleway', sans-serif;
     font-size: 2.2rem;
     font-weight: 800;
-    color: #fafafa;
-    /* text-transform: uppercase; */
     padding: 49px 15px;
     max-width: 1260px;
     margin: -49px auto 0 auto;
 }
 
 
-/* Navigation Bar Styles */
+/* Navigation Bar */
+
+/* 
+    Navbar sub menu
+    Hiden by default. 
+*/
+.sub-navigation {
+    display: none;
+    box-shadow: -2px 2px 16px rgba(0,0,0,0.2);
+    position: absolute;
+    z-index: 3;
+    top: 52px;
+    right: 83px;
+}
+
+/* Used to display sub navigation menu in JS function */
+.show-sub-nav {
+    display: flex;
+    flex-direction: column;
+    width: 130px;
+    background-color: #07689f;
+}
+
 #navbar {
     background-color: #07689f;
     overflow: visible;
@@ -49,63 +70,50 @@ h3 {
     z-index: 2;
 }
 
-/* Links inside the navbar */
-#navbar a {
-    font-family: 'Trirong', serif;
-    font-weight: 100;
-    display: block;
-    float: right;
-    color: #fafafa;
-    text-align: center;
-    padding: 12px 16px;
-    text-decoration: none;
-}
-
+/* Navbar Hamburger Icon */
 #navbar .icon {
     display: none;
 }
 
-.sub-navigation {
-    display: none;
-    box-shadow: -2px 2px 16px rgba(0,0,0,0.2);
-    position: absolute;
-    z-index: 3;
-    top: 52px;
-    right: 83px;
-
-}
-
-.show-sub-nav {
-    display: flex;
-    flex-direction: column;
-    width: 130px;
-    background-color: #07689f;
+/* Links inside the navbar */
+#navbar a {
+    font-weight: 100;
+    display: block;
+    float: right;
+    color: inherit;
+    text-align: center;
+    padding: 12px 16px;
+    text-decoration: none;
 }
 
 #navbar a:hover, #navbar a:focus {
     background-color: #079F8A;
 }
 
+/* projects navigation button */
 #projects-btn {
     cursor: pointer;
 }
 
-/* Hiding this option until needed */
+/* 
+    iOS, iPad projects.
+    Hiding this option until needed 
+*/
 #my-sub-navigation a[href^="#iOS-iPad"] {
     display: none;
 }
 
-/* Hiding this option until needed */
+/* 
+    Android projects
+    Hiding this option until needed
+*/
 #my-sub-navigation a[href^="#android"] {
     display: none;
 }
 
-/* Main Content */
-#main-doc {
-    /* margin-top: 48px; */
-}
 
 /* Welcome Section */
+
 #welcome-section {
     display: flex;
     flex-direction: column;
@@ -120,22 +128,17 @@ h3 {
 /* Name, Abilities, & Education */
 #welcome-section p {
     background-color: #ff7e67;
-    font-family: 'Trirong', serif;
     font-weight: 600;
-    text-align: left;
     font-size: 2.3rem;
-    color: #fafafa;
+    text-align: left;
     padding: 0.5rem 0.5rem;
     margin: 0;
 }
 
-/* Project Section */
-#projects {
-    background-color: #ff7e67;
-    padding-bottom: 60px;
-    /* background-color: #a2d5f2; */
-}
 
+/* Project Section */
+
+/* Projects grid container */
 .grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -147,11 +150,7 @@ h3 {
     
 }
 
-#html-css-js-collapsible-grid-container {
-    margin-top: 30px;
-    display: none;
-}
-
+/* Project tile contains img, project title, and project files */
 .project-tile { 
     padding: 0 15px;
 }
@@ -164,6 +163,7 @@ h3 {
     width: 101%;
 }
 
+/* Project img */
 .project-tile img{ 
     border-style: solid;
     border-width: 1px;
@@ -174,48 +174,42 @@ h3 {
     margin: 0;
 }
 
+/* Project title */
 .project-title {
-    font-family: 'Trirong', serif;
-    font-weight: 400;
     font-size: 2.5rem;
-    color: #fafafa;
-    display: inline-block;
     margin: 20px 0 0 0;
     line-height: 40px;
 
 }
 
+/* Project source file */
 .project-source-file {
-    font-family: 'Trirong', serif;
-    font-weight: 400;
+    display: inline-block;
     font-size: 0.9375rem;
-    color: #fafafa;
+    color: inherit;
+    text-decoration: none;
     margin: 0;
     padding-top: 15px;
 }
 
-.project-source-file a {
-    text-decoration: none;
-    color: #fafafa;
-}
-
-.project-source-file a:hover, .project-source-file a:focus {
+.project-source-file:hover, .project-source-file:focus {
     background-color: #67e8ff;
     font-size: 1.0625rem;
     padding: 10px;
 }
 
+/* Collapsible Button */
 .collapsible-button {
-    font-family: 'Trirong', serif;
+    font-family: inherit;
     font-weight: 600;
+    font-size: 1.5rem;
+    color: inherit;
     background-color: #07689f;
     border: none;
-    box-shadow: 5px 5px 5px rgba(0,0,0,0.2);
-    color: #fafafa;
     outline: none;
-    padding: 15px 32px;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.2);
     text-decoration: none;
-    font-size: 1.5rem;
+    padding: 15px 32px;
     margin: 30px auto;
 }
 
@@ -224,63 +218,73 @@ h3 {
     background-color: #079F8A;
 }
 
-
+/* Collapsible button container */
 .collapsible-button-container {
     text-align: center;
-    /* padding-bottom: 60px; */
 }
+
+/* HTML, CSS, and JS collapsible grid container */
+#html-css-js-collapsible-grid-container {
+    display: none;
+    margin-top: 30px;
+}
+
+#projects {
+    background-color: #ff7e67;
+    padding-bottom: 60px;
+}
+
 
 /* Contact Section */
-#contact {
-    background-color: #a2d5f2;
-    padding: 100px 0;
 
-}
-
+/* Contact Section Container */
 .contact-section-container {
     text-align: center;
     max-width: 1260px;
     width: 100%;
     margin: 0 auto;
+}
 
+#contact {
+    background-color: #a2d5f2;
+    padding: 100px 0;
 }
 
 #contact h3 {
     font-size: 4rem;
 }
 
+/* GitHub and Email links */
 #profile-link{
     display: inline-block;
     position: relative;
     font-family: 'Raleway', sans-serif;
-    font-weight: 400;
     font-size: 5.5rem;
     color: #ff7e67;
     text-decoration: none;
     padding: 50px 15px;
     z-index: 0;
-
 }
 
 #profile-link:hover {
    top: 20px;
 }
 
+/* GitHub and Email icons */
 #contact i {
     position: relative;
     z-index: -1;
 }
 
 #contact p {
-    font-family: 'Trirong', serif;
-    font-weight: 400;
     font-size: 1.5rem;
-    color: #fafafa;
     padding: 49px 15px 0;
     margin: 0;
 }
 
+
 /* Footer Section */
+
 footer {
     background-color: #a2d5f2;
     padding: 0 15px 10px;
@@ -293,10 +297,9 @@ footer {
 }
 
 .footer-container a {
-    font-family: 'Trirong', serif;
     font-weight: 100;
     font-size: 0.8rem;
-    color: #fafafa;
+    color: inherit;
     text-decoration: none;
 }
 
@@ -309,10 +312,8 @@ footer {
 }
 
 .footer-container p {
-    font-family: 'Trirong', serif;
     font-weight: 100;
     font-size: 0.8rem;
-    color: #fafafa;
     margin: 0;
 }
 
