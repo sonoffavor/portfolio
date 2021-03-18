@@ -200,6 +200,8 @@ h3 {
 
 /* Collapsible Button */
 .collapsible-button {
+     /* temporarily hidden */
+    display: none;
     font-family: inherit;
     font-weight: 600;
     font-size: 1.5rem;
